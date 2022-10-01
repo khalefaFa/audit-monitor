@@ -24,6 +24,11 @@ app.get('/', (req, res) => {
     res.send(String(x));
 })
 
+app.post('/', (req, res) => {
+    console.log(req.body);
+    res.send(JSON.stringify(req.body));
+})
+
 const PORT = 7070;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
